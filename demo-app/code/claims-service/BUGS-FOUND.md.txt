@@ -1,0 +1,45 @@
+# Bugs and Concerns
+
+## Build Environment Concern
+
+The Claims Service contains a Maven wrapper script, but the required Maven wrapper configuration file is missing:
+
+`.mvn/wrapper/maven-wrapper.properties`
+
+As a result, `mvnw.cmd` cannot start Maven and the project could not be fully built or tested using the wrapper.
+
+## Assessment Impact
+
+This is an environment/build concern rather than a confirmed application defect. Automated test execution should be repeated after the Maven wrapper configuration is restored or Maven is installed and configured.
+
+## Additional Risk Areas
+
+The highest-risk functional areas identified for further testing are:
+
+- Unauthorized users attempting administrative claim operations.
+- Invalid claim status transitions.
+- Missing or invalid claim identifiers.
+- Authentication and role handling.
+- BFF-to-Claims-Service communication failures.# Bugs and Concerns
+
+## Build Environment Concern
+
+The Claims Service contains a Maven wrapper script, but the required Maven wrapper configuration file is missing:
+
+`.mvn/wrapper/maven-wrapper.properties`
+
+As a result, `mvnw.cmd` cannot start Maven and the project could not be fully built or tested using the wrapper.
+
+## Assessment Impact
+
+This is an environment/build concern rather than a confirmed application defect. Automated test execution should be repeated after the Maven wrapper configuration is restored or Maven is installed and configured.
+
+## Additional Risk Areas
+
+The highest-risk functional areas identified for further testing are:
+
+- Unauthorized users attempting administrative claim operations.
+- Invalid claim status transitions.
+- Missing or invalid claim identifiers.
+- Authentication and role handling.
+- BFF-to-Claims-Service communication failures.

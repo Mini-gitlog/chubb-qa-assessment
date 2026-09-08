@@ -1,0 +1,27 @@
+# AI Working Journal
+
+## How AI Was Used
+
+AI was used as an assistant during the assessment to accelerate test design, identify high-risk scenarios, generate test ideas, and help structure the test documentation.
+
+## Accepted AI Suggestions
+
+- Prioritising authorization and role-based access testing.
+- Focusing automated coverage on critical claim-management behaviour.
+- Using negative test scenarios for unauthorized users and invalid requests.
+- Keeping the test suite focused on high-value scenarios rather than attempting exhaustive coverage.
+
+## Challenged or Reviewed Suggestions
+
+AI-generated code and test ideas were reviewed against the existing project structure before being considered for use. Suggestions that depended on assumptions about project classes, dependencies, or configuration were not blindly applied.
+
+## Human Decisions
+
+The final testing priorities and scope were selected based on the assessment requirements, application architecture, risk, and available time.
+
+## Limitations
+
+The local Maven wrapper could not execute because the project is missing:
+`.mvn/wrapper/maven-wrapper.properties`
+
+Therefore, automated test execution could not be fully verified locally during the assessment.

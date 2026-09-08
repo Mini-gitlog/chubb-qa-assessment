@@ -1,0 +1,41 @@
+
+
+## Scope
+
+The assessment focused on the highest-risk areas of the claims platform:
+
+- Authentication and authorization
+- Claim status updates
+- Claim creation and retrieval
+- API error handling
+- Service-to-service communication
+
+## Automation
+
+A basic automated test structure was added under:
+
+`src/test/java/com/example/demo/application/usecases`
+
+The initial test verifies that the test framework can execute a test successfully once the Maven build environment is available.
+
+Further tests should cover:
+
+1. Non-admin users cannot change claim status.
+2. Missing claims return the expected error.
+3. Valid administrators can change claim status.
+4. Invalid status transitions are rejected.
+5. Claim retrieval returns the expected data.
+
+## Environment Concern
+
+The Maven wrapper could not be executed because:
+
+`.mvn/wrapper/maven-wrapper.properties`
+
+is missing from the Claims Service project.
+
+Therefore, test execution results have not been represented as passing unless they can be verified after the build environment is corrected.
+
+## Priority
+
+Security and business-critical claim operations were prioritised over exhaustive UI, performance, and regression testing because of the assessment time constraint.

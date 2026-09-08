@@ -1,0 +1,34 @@
+# Test Strategy
+
+## Objective
+Validate the highest-risk areas of the claims application with a focus on authorization, claim status changes, API behaviour, and critical user flows.
+
+## Highest-Risk Areas
+- Admin authorization for claim status changes
+- Claim status transitions and business rules
+- Claim creation and retrieval
+- API error handling
+- Authentication and role-based access
+- BFF to Claims Service communication
+
+## Testing Approach
+- Unit tests for important business rules and authorization
+- Component/API tests for service behaviour
+- Integration tests for critical end-to-end claim flows
+- Negative tests for unauthorized and invalid requests
+
+## Priority
+1. Authorization/security
+2. Claim status updates
+3. Claim creation/retrieval
+4. API error handling
+5. UI and non-critical scenarios
+
+## Deliberately Not Covered
+Due to the limited assessment timeframe, exhaustive UI coverage, performance/load testing, and full regression coverage were not prioritised.
+
+## Risks and Concerns
+The project build environment requires Java 21 and Maven. The Maven wrapper in the claims-service project appears incomplete because the Maven wrapper properties file is missing. This prevented full local test execution during the assessment.
+
+## Exit Criteria
+Critical authorization and claim-management scenarios should have automated coverage, with remaining areas documented as risks or future test candidates.
